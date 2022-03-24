@@ -1,21 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package szokitalalo;
 
-/**
- *
- * @author szf1_b
- */
-public class SzoKitalalo {
+import java.util.Random;
 
-    /**
-     * @param args the command line arguments
-     */
+public class SzoKitalalo {
+   static String [] szoTomb = {"ól", "őz", "tó"};
     public static void main(String[] args) {
-        // TODO code application logic here
+        SzoValasztas();
+    }
+
+    static void SzoValasztas() {
+        String valasztott = " ";
+        Random rnd = new Random();
+        int szo = rnd.nextInt(szoTomb.length);
+        valasztott = szoTomb[szo];
+        System.out.println(valasztott);
     }
     
 }
